@@ -1,0 +1,10 @@
+<%= semantic_form_for @response do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :user_id, :as => :hidden, :input_html => {:value => @user.id} %> 
+    <%= f.input :item_id, :as => :hidden, :input_html => {:value => @item.id} %> 
+    <%= f.input :content %>
+  <% end %> 
+  <%= f.actions do %>
+    <%= f.actions :submit %>
+  <% end %>
+<% end %>

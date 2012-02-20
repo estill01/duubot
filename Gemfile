@@ -4,6 +4,8 @@ gem 'rails', '3.2.0'
 gem 'pg'
 gem 'bourbon'
 gem 'sorcery'
+gem 'kaminari'
+gem 'formtastic'
 
 
 

@@ -1,4 +1,14 @@
 Duubot::Application.routes.draw do
+  resources :user do
+    member do 
+      resources :item
+      resources :response 
+    end
+  end
+
+  match 'items/' => 'item#index'
+  match 'responses/' => 'response#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
