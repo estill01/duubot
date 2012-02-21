@@ -30,7 +30,7 @@ class UserController < ApplicationController
 
   def update
     @user = current_user
-    if @user.update_attributes
+    if @user.update_attributes(params[:user])
       redirect_to user_route(@user), :notice => "Account information updated."
     else
       flash.now[:error] = "Unable to update account information."

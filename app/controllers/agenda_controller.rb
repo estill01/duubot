@@ -15,7 +15,7 @@ class AgendaController < ApplicationController
     @user = current_user
     @agenda = Agenda.new(params[:agenda])
     if @agenda.save
-      redirect_to :new, :notice => "Agenda added"
+      redirect_to 'new', :notice => "Agenda added"
     else
       flash.now[:error] = "Failed to add Agenda"
       render 'new'

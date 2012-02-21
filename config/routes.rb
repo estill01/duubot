@@ -2,13 +2,12 @@ Duubot::Application.routes.draw do
   root :to => 'user#new'
 
   resources :user do
-    member do 
-      resources :item
-      resources :response 
-      resources :agenda
-    end
+    resources :item
+    resources :response 
+    resources :agenda
   end
   resources :session
+  resources :agenda
 
   match 'signup' => 'user#new', :as => :signup
   post 'users' => 'user#create'

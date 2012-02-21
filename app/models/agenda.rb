@@ -1,5 +1,6 @@
 class Agenda < ActiveRecord::Base
-  attr_accessible :name, :description
+  attr_accessible :name, :description, :goals
 
   belongs_to :user
+  has_many :goals, :as => :goalable
 end

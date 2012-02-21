@@ -11,12 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120221062221) do
+ActiveRecord::Schema.define(:version => 20120221193126) do
 
   create_table "agendas", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
     t.integer  "user_id"
+    t.string   "name"
+    t.integer  "goals_count", :default => 0
+  end
+
+  create_table "goals", :force => true do |t|
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "goalable_id"
+    t.string   "goalable_type"
   end
 
   create_table "items", :force => true do |t|
