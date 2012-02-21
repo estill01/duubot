@@ -1,10 +1,19 @@
 Duubot::Application.routes.draw do
+  root :to => 'user#new'
+
   resources :user do
     member do 
       resources :item
       resources :response 
+      resources :agenda
     end
   end
+  resources :session
+
+  match 'signup' => 'user#new', :as => :signup
+  post 'users' => 'user#create'
+  match 'login' => 'session#new', :as => :login
+  match 'logout' => 'session#destroy', :as => :logout
 
   match 'items/' => 'item#index'
   match 'responses/' => 'response#index'

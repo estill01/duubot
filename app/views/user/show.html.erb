@@ -1,0 +1,10 @@
+<h1><%= @user.username %></h1>
+<% if @user == current_user %>
+  <p>That's you!</p>
+<% end %>
+<%= @user.created_at %>
+
+<% @user.items.each do |item| %>
+  <%= truncate("#{item.content}", :length => 30) %>
+  Responses: <%= item.responses_count %> | Posted: <%= item.created_at %>
+<% end %>

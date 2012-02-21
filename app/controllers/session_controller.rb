@@ -3,7 +3,7 @@ class SessionController < ApplicationController
     unless logged_in?
       @user = User.new
     else
-      redirect_to user_path(@user)
+      redirect_to user_path(current_user)
     end
   end
 
