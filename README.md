@@ -5,7 +5,7 @@ Making a system to aid collaborative strategic thinking through a versioned and 
 Start with a blank slate except 'You' in the middle.
 Click to add a new entity.
 
-Then, map out how the entities are interacting -- a situation:
+Then, map out how the entities are interacting -- a situation
 * What are the entities
 * Why they are doing what they are doing (/what they want)
 * How do the individual activities/motivations of the entities Interaction
@@ -21,7 +21,7 @@ Voting, reputation, etc.
 
 ---
 # Response Types
-Users can (will be able to) post through standardized structured interfaces:
+Users can (will be able to) post through standardized structured interfaces
 * agendas (top-level containers)
 * situations (events encountered within agenda-scoped operation)
 * goals (polymorphic; basically everything gets a goal set)
